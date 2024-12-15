@@ -2,3 +2,55 @@
   text-align: center;
   padding: 20px;
 }
+
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.forecast-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Smaller base font size */
+  }
+
+  .weather-container {
+    padding: 10px; /* Reduce padding */
+  }
+
+  .weather-icon {
+    width: 50px; /* Smaller icon size */
+    height: 50px;
+  }
+
+  .forecast-item {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .forecast-item h3 {
+    font-size: 16px; /* Smaller heading */
+  }
+
+  .forecast-item p {
+    font-size: 12px; /* Smaller text */
+  }
+
+  .search-bar {
+    width: 100%; /* Full width for search bar */
+    padding: 8px; /* Adjust padding */
+  }
+}

@@ -35,40 +35,40 @@ function Forecast({ forecastData, darkMode }) {
                   : ''
               }`}
             >
-              <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
-                <div className="text-lg font-medium">{formatDate(day.dt)}</div>
-                <div className="flex justify-center">
+              <div className="grid grid-cols-1 md:grid-cols-4 items-center gap-4"> 
+                <div className="text-lg font-medium">{formatDate(day.dt)}</div> 
+                <div className="flex justify-center"> 
                   <WeatherIcon 
-                    iconCode={day.weather[0].icon}
-                    size="2.5em"
-                    className={`${darkMode ? 'text-blue-400' : 'text-blue-600'}`}
-                  />
-                </div>
-                <div className="flex flex-row sm:flex-col items-center justify-center gap-4 sm:gap-1">
-                  <div className="flex items-center gap-1">
-                    <WiThermometer className={`text-xl ${darkMode ? 'text-red-400' : 'text-red-500'}`} />
-                    <span className="font-medium text-lg">
-                      {Math.round(day.temp.max)}°
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <WiThermometerExterior className={`text-xl ${darkMode ? 'text-blue-400' : 'text-blue-500'}`} />
-                    <span className={`font-medium text-lg ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                      {Math.round(day.temp.min)}°
-                    </span>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center sm:justify-end gap-2">
-                  <div className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                    {day.weather[0].description}
-                  </div>
-                  {day.pop > 0 && (
-                    <div className={`text-sm ${darkMode ? 'text-blue-400' : 'text-blue-600'}`}>
-                      {Math.round(day.pop * 100)}%
-                    </div>
-                  )}
-                </div>
-              </div>
+                    iconCode={day.weather[0].icon} 
+                    size="2.5em" 
+                    className={`${darkMode ? 'text-blue-400' : 'text-blue-600'}`} 
+                  /> 
+                </div> 
+                <div className="flex flex-row md:flex-col items-center justify-center gap-4 md:gap-1"> 
+                  <div className="flex items-center gap-1"> 
+                    <WiThermometer className={`text-xl ${darkMode ? 'text-red-400' : 'text-red-500'}`} /> 
+                    <span className="font-medium text-lg"> 
+                      {Math.round(day.temp.max)}° 
+                    </span> 
+                  </div> 
+                  <div className="flex items-center gap-1"> 
+                    <WiThermometerExterior className={`text-xl ${darkMode ? 'text-blue-400' : 'text-blue-500'}`} /> 
+                    <span className={`font-medium text-lg ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}> 
+                      {Math.round(day.temp.min)}° 
+                    </span> 
+                  </div> 
+                </div> 
+                <div className="flex items-center justify-center md:justify-end gap-2"> 
+                  <div className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}> 
+                    {day.weather[0].description} 
+                  </div> 
+                  {day.pop > 0 && ( 
+                    <div className={`text-sm ${darkMode ? 'text-blue-400' : 'text-blue-600'}`}> 
+                      {Math.round(day.pop * 100)}% 
+                    </div> 
+                  )} 
+                </div> 
+              </div> 
             </div>
 
             {/* Hourly Forecast Dropdown */}

@@ -17,32 +17,32 @@ function Weather({ weatherData, darkMode }) {
   const current = weatherData.current;
 
   return (
-    <div className={`p-6 rounded-lg ${darkMode ? 'bg-gray-800' : 'bg-white shadow-lg'}`}>
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-        <div>
-          <h2 className="text-3xl font-bold mb-1">{current.name}</h2>
-          <div className="text-5xl font-bold mb-4">
-            {Math.round(current.main.temp)}°C
-          </div>
-          <div className={`text-lg ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-            {current.weather[0].description}
-          </div>
-        </div>
+    <div className={`p-6 rounded-lg ${darkMode ? 'bg-gray-800' : 'bg-white shadow-lg'}`}> 
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6"> 
+        <div> 
+          <h2 className="text-3xl font-bold mb-1">{current.name}</h2> 
+          <div className="text-5xl font-bold mb-4"> 
+            {Math.round(current.main.temp)}°C 
+          </div> 
+          <div className={`text-lg ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}> 
+            {current.weather[0].description} 
+          </div> 
+        </div> 
 
-        <div className="flex items-center justify-center w-full md:w-auto">
+        <div className="flex items-center justify-center w-full md:w-auto"> 
           <WeatherIcon 
-            iconCode={current.weather[0].icon}
-            size="6em"
-            className={`${darkMode ? 'text-blue-400' : 'text-blue-600'}`}
-          />
-        </div>
+            iconCode={current.weather[0].icon} 
+            size="6em" 
+            className={`${darkMode ? 'text-blue-400' : 'text-blue-600'}`} 
+          /> 
+        </div> 
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-2 w-full md:w-auto">
-          <div className="flex items-center gap-2">
-            <WiThermometer className={`text-xl ${darkMode ? 'text-gray-400' : 'text-gray-600'}`} />
-            <span className={`${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Feels like: </span>
-            <span className="font-medium">{Math.round(current.main.feels_like)}°C</span>
-          </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-2 w-full md:w-auto"> 
+          <div className="flex items-center gap-2"> 
+            <WiThermometer className={`text-xl ${darkMode ? 'text-gray-400' : 'text-gray-600'}`} /> 
+            <span className={`${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Feels like: </span> 
+            <span className="font-medium">{Math.round(current.main.feels_like)}°C</span> 
+          </div> 
           <div className="flex items-center gap-2">
             <WiHumidity className={`text-xl ${darkMode ? 'text-gray-400' : 'text-gray-600'}`} />
             <span className={`${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Humidity: </span>
