@@ -1,17 +1,19 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #e1f5fe, #b3e5fc) !important; /* Lighter sky blue gradient */
+}
+
 .App {
     text-align: center;
     padding: 20px;
-    background: linear-gradient(to bottom, #e1f5fe, #b3e5fc); /* Lighter sky blue gradient */
-    min-height: 100vh; /* Ensure it covers the full viewport height */
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #e1f5fe, #b3e5fc); /* Lighter sky blue gradient */
-    color: #0277bd; /* Darker blue text */
-    transition: background 0.5s ease; /* Smooth transition for background */
-    min-height: 100vh; /* Ensure it covers the full viewport height */
+    min-height: 100vh;
+    background: transparent; /* Remove any background from App container */
+    max-width: 1300px; /* Increased from default 1200px */
+    min-width: 1300px; /* Set minimum width to match max-width */
+    margin: 0 auto; /* Center the container */
+    width: 100%; /* Full width up to max-width */
 }
 
 h1, h2, h3 {
@@ -33,6 +35,10 @@ button:hover {
 }
 
 .weather-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
     background-color: white; /* White background for weather container */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -71,6 +77,21 @@ button:hover {
     flex: 1 1 20%; /* Allow items to grow and fill the space, with a base width of 20% */
     margin: 5px; /* Add some margin for spacing */
     text-align: center; /* Center the text */
+}
+
+.daily-data {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    margin: 20px 0; /* Add some margin for spacing */
+    padding: 10px; /* Add padding for better spacing */
+}
+
+.daily-data-item {
+    flex: 1; /* Allow items to grow and fill the space */
+    margin: 0 10px; /* Add some margin for spacing */
+    text-align: center; /* Center the text */
+    white-space: nowrap; /* Prevent items from wrapping to the next line */
 }
 
 @media (max-width: 768px) {
