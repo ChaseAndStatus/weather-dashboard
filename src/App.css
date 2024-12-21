@@ -4,8 +4,9 @@
 }
 
 body {
-    background-color: #e0f7fa; /* Light blue background */
+    background: linear-gradient(to bottom, #e0f7fa, #b2ebf2); /* Light blue gradient */
     color: #0277bd; /* Darker blue text */
+    transition: background 0.5s ease; /* Smooth transition for background */
 }
 
 h1, h2, h3 {
@@ -19,6 +20,7 @@ button {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth button hover effect */
 }
 
 button:hover {
@@ -26,12 +28,14 @@ button:hover {
 }
 
 .weather-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white; /* White background for weather container */
+    background-color: white; /* White background for weather container */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+.weather-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
 }
 
 .weather-icon {
@@ -40,14 +44,14 @@ button:hover {
 }
 
 .forecast-item {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 0;
-  background-color: #f1f8e9; /* Light greenish background for forecast items */
+    background-color: #f1f8e9; /* Light greenish background for forecast items */
     border-radius: 5px;
     padding: 10px;
+    transition: transform 0.2s ease; /* Smooth scale effect */
+}
+
+.forecast-item:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
 }
 
 @media (max-width: 768px) {

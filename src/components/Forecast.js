@@ -84,32 +84,32 @@ function Forecast({ forecastData, darkMode }) {
               }`}>
                 <h3 className="font-medium mb-3">Hourly Forecast</h3>
                 <div className="overflow-x-auto">
-                  <div className="flex gap-3 pb-2">
-                    {day.hourly?.slice(0, 8).map((hour) => (
+                  <div className="flex gap-3 pb-2 hourly-forecast"> 
+                    {day.hourly?.slice(0, 8).map((hour) => ( 
                       <div 
                         key={hour.dt} 
-                        className={`flex-none w-24 p-3 rounded-lg text-center ${
-                          darkMode ? 'bg-gray-600' : 'bg-white'
-                        }`}
-                      >
-                        <div className="font-medium mb-1">{formatTime(hour.dt)}</div>
-                        <div className="flex justify-center">
+                        className={`flex-none hourly-item p-3 rounded-lg text-center ${ 
+                          darkMode ? 'bg-gray-600' : 'bg-white' 
+                        }`} 
+                      > 
+                        <div className="font-medium mb-1">{formatTime(hour.dt)}</div> 
+                        <div className="flex justify-center"> 
                           <WeatherIcon 
-                            iconCode={hour.weather[0].icon}
-                            size="2em"
-                            className={`${darkMode ? 'text-blue-400' : 'text-blue-600'}`}
-                          />
-                        </div>
-                        <div className="font-medium mt-1">{Math.round(hour.main.temp)}°C</div>
-                        {hour.pop > 0 && (
-                          <div className={`text-sm ${
-                            darkMode ? 'text-blue-400' : 'text-blue-600'
-                          }`}>
-                            {Math.round(hour.pop * 100)}%
-                          </div>
-                        )}
-                      </div>
-                    ))}
+                            iconCode={hour.weather[0].icon} 
+                            size="2em" 
+                            className={`${darkMode ? 'text-blue-400' : 'text-blue-600'}`} 
+                          /> 
+                        </div> 
+                        <div className="font-medium mt-1">{Math.round(hour.main.temp)}°C</div> 
+                        {hour.pop > 0 && ( 
+                          <div className={`text-sm ${ 
+                            darkMode ? 'text-blue-400' : 'text-blue-600' 
+                          }`}> 
+                            {Math.round(hour.pop * 100)}% 
+                          </div> 
+                        )} 
+                      </div> 
+                    ))} 
                   </div>
                 </div>
               </div>

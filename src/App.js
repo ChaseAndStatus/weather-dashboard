@@ -40,6 +40,25 @@ function App() {
     loadDefaultWeather();
   }, []); // Run once on component mount
 
+  useEffect(() => {
+    const loadDynamicTheme = async () => {
+      if (weatherData) {
+        const currentHour = new Date().getHours();
+        const sunrise = new Date(weatherData.current.sys.sunrise * 1000).getHours();
+        const sunset = new Date(weatherData.current.sys.sunset * 1000).getHours();
+
+        // Set dark mode based on time
+        if (currentHour >= sunrise && currentHour < sunset) {
+          setDarkMode(false); // Light mode
+        } else {
+          setDarkMode(true); // Dark mode
+        }
+      }
+    };
+
+    loadDynamicTheme();
+  }, [weatherData]);
+
   const handleSearch = async (searchTerm) => {
     try {
       setError(null);
