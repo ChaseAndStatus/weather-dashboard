@@ -1,12 +1,17 @@
 .App {
-  text-align: center;
-  padding: 20px;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to bottom, #e1f5fe, #b3e5fc); /* Lighter sky blue gradient */
+    min-height: 100vh; /* Ensure it covers the full viewport height */
 }
 
 body {
-    background: linear-gradient(to bottom, #e0f7fa, #b2ebf2); /* Light blue gradient */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #e1f5fe, #b3e5fc); /* Lighter sky blue gradient */
     color: #0277bd; /* Darker blue text */
     transition: background 0.5s ease; /* Smooth transition for background */
+    min-height: 100vh; /* Ensure it covers the full viewport height */
 }
 
 h1, h2, h3 {
@@ -55,16 +60,15 @@ button:hover {
 }
 
 .hourly-forecast {
-    display: flex;
+    display: flex; /* Use flexbox for horizontal layout */
     flex-wrap: wrap; /* Allow items to wrap on smaller screens */
     overflow-x: hidden; /* Hide horizontal overflow */
     width: 100%; /* Full width of the parent container */
-    justify-content: space-around; /* Space items evenly */
+    justify-content: space-between; /* Space items evenly */
 }
 
 .hourly-item {
-    flex: 1; /* Allow items to grow and fill the space */
-    min-width: 80px; /* Set a minimum width for each hour item */
+    flex: 1 1 20%; /* Allow items to grow and fill the space, with a base width of 20% */
     margin: 5px; /* Add some margin for spacing */
     text-align: center; /* Center the text */
 }

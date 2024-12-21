@@ -90,7 +90,7 @@ function Forecast({ forecastData, darkMode }) {
                         key={hour.dt} 
                         className={`flex-none hourly-item p-3 rounded-lg text-center ${ 
                           darkMode ? 'bg-gray-600' : 'bg-white' 
-                        } w-full md:w-1/2 lg:w-1/4 xl:w-1/8 sm:w-1/2`} 
+                        } w-full md:w-1/2 lg:w-1/4 xl:w-1/8`} 
                       > 
                         <div className="font-medium mb-1">{formatTime(hour.dt)}</div> 
                         <div className="flex justify-center"> 
