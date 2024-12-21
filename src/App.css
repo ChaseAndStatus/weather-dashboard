@@ -3,10 +3,35 @@
   padding: 20px;
 }
 
+body {
+    background-color: #e0f7fa; /* Light blue background */
+    color: #0277bd; /* Darker blue text */
+}
+
+h1, h2, h3 {
+    color: #01579b; /* Darker blue for headings */
+}
+
+button {
+    background-color: #03a9f4; /* Blue button background */
+    color: white; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0288d1; /* Darker blue on hover */
+}
+
 .weather-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white; /* White background for weather container */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .weather-icon {
@@ -20,6 +45,9 @@
   justify-content: space-between;
   align-items: center;
   margin: 10px 0;
+  background-color: #f1f8e9; /* Light greenish background for forecast items */
+    border-radius: 5px;
+    padding: 10px;
 }
 
 @media (max-width: 768px) {
