@@ -84,13 +84,13 @@ function Forecast({ forecastData, darkMode }) {
               }`}>
                 <h3 className="font-medium mb-3">Hourly Forecast</h3>
                 <div className="overflow-x-auto">
-                  <div className="flex gap-3 pb-2 hourly-forecast"> 
+                  <div className="flex flex-wrap gap-3 pb-2 hourly-forecast"> 
                     {day.hourly?.slice(0, 8).map((hour) => ( 
                       <div 
                         key={hour.dt} 
                         className={`flex-none hourly-item p-3 rounded-lg text-center ${ 
                           darkMode ? 'bg-gray-600' : 'bg-white' 
-                        }`} 
+                        } w-full md:w-1/2 lg:w-1/4 xl:w-1/8 sm:w-1/2`} 
                       > 
                         <div className="font-medium mb-1">{formatTime(hour.dt)}</div> 
                         <div className="flex justify-center"> 

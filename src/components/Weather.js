@@ -18,8 +18,8 @@ function Weather({ weatherData, darkMode }) {
 
   return (
     <div className={`p-6 rounded-lg ${darkMode ? 'bg-gray-800' : 'bg-white shadow-lg'}`}> 
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6"> 
-        <div> 
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 sm:gap-8"> 
+        <div className="md:w-1/2"> 
           <h2 className="text-3xl font-bold mb-1">{current.name}</h2> 
           <div className="text-5xl font-bold mb-4"> 
             {Math.round(current.main.temp)}°C 

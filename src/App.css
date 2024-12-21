@@ -54,6 +54,21 @@ button:hover {
     transform: scale(1.02); /* Slightly enlarge on hover */
 }
 
+.hourly-forecast {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    width: 100%; /* Full width of the parent container */
+    justify-content: space-around; /* Space items evenly */
+}
+
+.hourly-item {
+    flex: 1; /* Allow items to grow and fill the space */
+    min-width: 80px; /* Set a minimum width for each hour item */
+    margin: 5px; /* Add some margin for spacing */
+    text-align: center; /* Center the text */
+}
+
 @media (max-width: 768px) {
   body {
     font-size: 14px; /* Smaller base font size */
